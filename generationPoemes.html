@@ -1,0 +1,43 @@
+﻿<!-- 
+	
+									------------
+										V1.2
+									------------
+						Changement de la gestion des variables : mises dans un tableau.
+						Remplacement de l'annonce du nombre de variables par NomTableau.length dans Math.random
+-->
+	
+	<html>
+		
+		<head>
+			<title>Génération aléatoire de poèmes</title>
+			<meta name="author" content="Alexis Souchet" />
+			<link rel="stylesheet" type="text/css" href="styles.css">
+			<script language="javascript" type="text/javascript" src="script.js"></script>
+		</head>
+
+		<body style="background-color:grey">
+			<!-- BOUTON POUR GENERER LE POEME -->
+			<input id="new" type="button" value="Nouveau poème" onClick="sujet(); verbe(); complement(); sujet2(); verbe2(); complement2(); sujet3(); verbe3(); complement3(); randomColor();">
+			</br>
+			</br>
+			</br>
+			<!-- POEME -->
+			<div id="animtext">
+			<p id="poeme"><span id="txt"> </span> <span id="vrb"> </span> <span id="cod"></span><p>
+			<p id="poeme"><span id="txt2"> </span> <span id="vrb2"> </span> <span id="cod2"></span><p>
+			<p id="poeme"><span id="txt3"> </span> <span id="vrb3"> </span> <span id="cod3"></span><p>
+			</div>
+			</br>
+			</br>
+			<!-- PARTAGE SUR TWITTER-->
+			<img id="logotwitter" onClick="tweet();" src="twitter13.svg">
+			<p id="twitter" onClick="tweet();">Twitter ce poème</p>
+			<!-- CREDITS -->
+			</br>
+			<!-- Lien pour voir les credits. Active la fonction cachermontrer -->
+			<a href="javascript:cachermontrer(document.getElementById('credits'))" id="montrecredits">?</a>
+			<!-- texte des credits-->
+			<p id="credits">Par A.S., atelier Poésie Numérique dirigé par Philippe Bootz, Paris 8, avril 2015.</p>
+		</body>
+	</html>

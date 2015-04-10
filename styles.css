@@ -1,0 +1,81 @@
+/*
+
+
+	FEUILLE DE STYLE
+
+*/
+body {
+			background-size:100%;
+		}
+		
+		#new {
+			width: 13%;
+			height: 8%;
+			display: block;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 7%;
+			background-color:white;
+			border: 0;
+			cursor: pointer;
+			border-radius: 3em;
+			opacity:50%;
+			outline:0; 
+		}
+		
+		#new:hover {
+			background-color:black;
+			color:white;
+			outline:0; 
+		}
+		
+		#animtext {
+		}
+		
+		#poeme {
+			color:white;
+			position: relative;
+			text-align:center;
+			font-size:2em;
+			font-family: Verdana, sans-serif;
+		}
+		
+		#twitter {
+			text-align:center;
+			color:white;
+			cursor: pointer;
+			outline:0; 
+		}
+		
+		#twitter:hover {
+			color:black;
+		}
+		
+		#logotwitter {
+			cursor: pointer;
+			width:4%;
+			margin-left:48%;
+		}
+		
+		#montrecredits {
+			color:white;
+			font-family: Verdana, sans-serif;
+			margin-left:49.5%;
+			font-size:1.5em;
+			text-decoration:none; 
+			outline:0;
+		}
+		
+		#montrecredits:hover {
+			color:black;
+		}
+		
+		#credits {
+			display: none;
+			color:white;
+			position: relative;
+			font-family: Verdana, sans-serif;
+			text-align:right;
+			font-size:0.6em;
+		}

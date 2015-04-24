@@ -6,6 +6,14 @@
 
 // ************************************************************************************************
 // TABLEAUX DES SUJETS VERBES COMPLEMENTS
+    
+    // Tableaux pour twitter
+    sujetOriginal = new Array (
+    );
+    verbeOriginal = new Array (
+    );
+    codOriginal = new Array (
+    );
 
     // Sujets
     lisujets = new Array (
@@ -81,6 +89,8 @@
             // On écrit les sujets dans la page html
             obj.innerHTML = lisujets [aleatoire];
             
+            sujetOriginal[a] = (lisujets [aleatoire]);
+            
             console.log('Nombre sujets : '+lisujets.length);
             
         }
@@ -100,6 +110,8 @@
             // On écrit les verbes dans la page html
             obj.innerHTML = liverbes [aleatoire];
             
+            verbeOriginal[a] = (liverbes [aleatoire]);
+            
             console.log('Nombre verbes : '+liverbes.length);
         
         }
@@ -118,6 +130,8 @@
             var obj=document.getElementById(id);
             // On écrit les compléments dans la page html
             obj.innerHTML = licomplements [aleatoire];
+            
+            codOriginal[a] = (licomplements [aleatoire]);
             
             console.log('Nombre complements : '+licomplements.length);
             
@@ -143,4 +157,18 @@
         img = Math.round(Math.random()*bcgimg);
         document.body.style.background = changeCol[img];
 
+    }
+
+// ************************************************************************************************
+// TWITTER
+
+    function tweet() {
+        
+        // Récupérer les infos du compte sauvegardé dans le navigateur 
+        // et ajout des variables de texte inscrits aléatoirement dans le HTML
+        adresse="http://twitter.com/share?related=[your_twitter_account]&via=poesienum&lang=[fr]&text= "+sujetOriginal[0]+" "+verbeOriginal[0]+" "+codOriginal[0]+" "+sujetOriginal[1]+" "+verbeOriginal[1]+" "+codOriginal[1]+" "+sujetOriginal[2]+" "+verbeOriginal[2]+" "+codOriginal[2]+'#generationAutomatique'+"&url=[www.google.com]";
+
+        // Ouvre l'adresse dans la fenêtre du navigateur
+        window.location.href=adresse;
+        
     }

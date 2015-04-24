@@ -8,7 +8,7 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #EEEEEE;}
 
     /* POEME */
     #animtext { width: 800px; height: 400px; margin: 20px auto; overflow: hidden; font-family: 'Merriweather', serif; 
-        color: #FFFFFF; text-align: center; font-size: 30px; line-height: 22px; border: 1px solid #FFFFFF;}
+        color: #FFFFFF; text-align: center; font-size: 30px; line-height: 22px; border: 1px solid #FFFFFF; padding: 15px;}
 
         #poeme { position: static;}
     
@@ -19,15 +19,21 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #EEEEEE;}
 
     /* BULLE OUTIL */
     .bulleOutil { width: 60px; height: 60px; border: 1px solid #FFFFFF; border-radius: 60px; text-align: center; cursor: pointer; 
-        position: absolute; bottom: 20px;}
-    .bulleOutil:hover { box-shadow: 0 0 10px #FFFFFF;}
+        position: absolute; bottom: 20px; opacity: 0.3;}
+    .bulleOutil:hover { opacity: 1;}
 
     /* TWITTER */
     #bulleTwitter { float: left; right: 20px;}
         #logotwitter { width: 20px; padding: 20px 0px 0px 0px;}
 
     /* A PROPOS */
+    #popupCredit { width: 160px; height: 50px; background: #FFFFFF; padding: 10px; position: absolute; bottom: 85px; 
+        right: 40px; display: none;}
+    #popupCredit #creditTexte { font-family: Arial; font-size: 12px; line-height: 16px; text-align: center;}
+
     #bulleApropos { float: left; right: 100px;}
+    #bulleApropos p { font-family: Arial; font-size: 16px; color: #FFFFFF; padding: 5px 0px 0px 0px;}
+
 
 
 		#new {
@@ -50,32 +56,4 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #EEEEEE;}
 			background-color:black;
 			color:white;
 			outline:0; 
-		}
-		
-		
-		
-		
-		
-		
-		
-		#montrecredits {
-			color:white;
-			font-family: Verdana, sans-serif;
-			margin-left:49.5%;
-			font-size:1.5em;
-			text-decoration:none; 
-			outline:0;
-		}
-		
-		#montrecredits:hover {
-			color:black;
-		}
-		
-		#credits {
-			display: none;
-			color:white;
-			position: relative;
-			font-family: Verdana, sans-serif;
-			text-align:right;
-			font-size:0.6em;
 		}

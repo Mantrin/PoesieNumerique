@@ -38,20 +38,20 @@
     // Fonction modification du texte
     function modifTexte(phrase, lchiffre) {
         var str = phrase;
-        var HTMLa = "";
+        var HTML = "";
         mem[lchiffre]=mem[lchiffre].big();
 
         for(i =0; i<phrase.length;i++){
             memi =0;
             for(j=0;j<lettre.length;j++){
                 if (phrase[i]==lettre[j]){
-                    HTMLa +=mem[j];
+                    HTML +=mem[j];
                     memi=1;
                 }
             }
             if(memi==0){
-                    HTMLa +=phrase[i]
+                    HTML +=phrase[i]
             }
         }
-        document.getElementById("animtext").innerHTML = HTMLa;
+        document.getElementById("animtext").innerHTML = HTML;
     }

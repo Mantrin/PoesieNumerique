@@ -1,13 +1,35 @@
 /*
 
-
-	FEUILLE DE STYLE
+    FEUILLE DE STYLE
 
 */
-body {
-			background-size:100%;
-		}
-		
+
+body { width:  100%; margin: 0; padding: 0; border: 0; background: #EEEEEE;}
+
+    /* POEME */
+    #animtext { width: 800px; height: 400px; margin: 20px auto; overflow: hidden; font-family: 'Merriweather', serif; 
+        color: #FFFFFF; text-align: center; font-size: 30px; line-height: 22px; border: 1px solid #FFFFFF;}
+
+        #poeme { position: static;}
+    
+    /* COMPTE A REBOURS */
+    #car { width: 50px; margin: 0 auto; text-align: center;}
+        .carChiffre { background: none; border: 0; text-align: center; color: #FFFFFF; font-family: 'Merriweather', serif; 
+            font-size: 10px;}
+
+    /* BULLE OUTIL */
+    .bulleOutil { width: 60px; height: 60px; border: 1px solid #FFFFFF; border-radius: 60px; text-align: center; cursor: pointer; 
+        position: absolute; bottom: 20px;}
+    .bulleOutil:hover { box-shadow: 0 0 10px #FFFFFF;}
+
+    /* TWITTER */
+    #bulleTwitter { float: left; right: 20px;}
+        #logotwitter { width: 20px; padding: 20px 0px 0px 0px;}
+
+    /* A PROPOS */
+    #bulleApropos { float: left; right: 100px;}
+
+
 		#new {
 			width: 13%;
 			height: 8%;
@@ -30,33 +52,11 @@ body {
 			outline:0; 
 		}
 		
-		#animtext {
-		}
 		
-		#poeme {
-			color:white;
-			position: relative;
-			text-align:center;
-			font-size:2em;
-			font-family: Verdana, sans-serif;
-		}
 		
-		#twitter {
-			text-align:center;
-			color:white;
-			cursor: pointer;
-			outline:0; 
-		}
 		
-		#twitter:hover {
-			color:black;
-		}
 		
-		#logotwitter {
-			cursor: pointer;
-			width:4%;
-			margin-left:48%;
-		}
+		
 		
 		#montrecredits {
 			color:white;

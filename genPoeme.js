@@ -29,7 +29,7 @@
         "L'être","La fleur","Le magicien","L'Odyssée",
         "Le Dieu","L'océan","La forêt","Le fleuve",
         "L'enfant","L'espace","Le verbe","La prose",
-        "La réthorique","L'espérance", "la mort"
+        "La réthorique","L'espérance", "La mort"
     );
 
     // Verbes	
@@ -68,6 +68,7 @@
         sujet();
         verbe();
         complement();
+        
         randomColor();
     }
 
@@ -142,11 +143,11 @@
 // BACKGROUND ALEATOIRE
 
     // Variable "changeCol" abrite un tableau qui liste toutes les couleurs possibles
-    var changeCol = new Array("#36341b","#323f38","#7c8f7c","#92996f","#e3bd72","#ba944d","#b35a48",
-                              "#42271c","#08589e","#7bccc4","#a8ddb5","#4eb3d3","#d2d904","#f23d30","#572436","#4a3970",
+    var changeCol = new Array("#36341b","#323f38","#7c8f7c","#92996f","#ba944d","#b35a48",
+                              "#42271c","#08589e","#4eb3d3","#d2d904","#f23d30","#572436","#4a3970",
                               "#7f6aa0","#b4ace2","#49006a","#ae017e","#776677","#665555","#554455","#fe9711","#ee6644",
-                              "#fb0b81","#22ee88","#5b0796","#7c1c32","#4e1833","#8b5974","#6e4373","#454b81","#445511",
-                              "#CCEEFF","#806315","#553E00","#354F00","#226666");
+                              "#fb0b81","#5b0796","#7c1c32","#4e1833","#8b5974","#6e4373","#454b81","#445511",
+                              "#806315","#553E00","#354F00","#226666");
 
     // Fonction pour générer une couleur aléatoire
     function randomColor() {
@@ -172,3 +173,29 @@
         window.location.href=adresse;
         
     }
+
+
+// ************************************************************************************************
+// JQUERY
+
+    
+    $(function(){
+        
+        // Cacher le poeme avec un bloc blanc
+        setInterval(function(){cacher();},500);
+        
+        function cacher() {
+            var valeur = $("#carreBlanc1").height();
+            valeur = valeur + 1;
+            $("#carreBlanc1").css({
+            height: valeur + "px",
+            background: "#FFFFFF"
+            });
+        }
+        
+        // Faire disparaitre le premier sujet en cliquant dessus
+        $("#sujet1").click(function() {
+            $("#sujet1").fadeIn(200);
+        });
+            
+    });

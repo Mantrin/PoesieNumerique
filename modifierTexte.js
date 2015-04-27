@@ -39,6 +39,7 @@
     function modifTexte(phrase, lchiffre) {
         var str = phrase;
         var HTML = "";
+        // On augmente la taille de la lettre
         mem[lchiffre]=mem[lchiffre].big();
 
         for(i =0; i<phrase.length;i++){
@@ -53,5 +54,6 @@
                     HTML +=phrase[i]
             }
         }
+        // Ecriture de la phrase sur la page
         document.getElementById("animtext").innerHTML = HTML;
     }

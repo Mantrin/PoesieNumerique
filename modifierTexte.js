@@ -22,15 +22,24 @@
         
     }
 
-    // Fonction jQuery pour lier code et lettre
+    
     $(function(){
 
         $(document).keydown(function(touche) {
+            
+            // Fonction jQuery pour lier code et lettre
+            var poeme = $("#animtext").text();
+            var press = touche.which || touche.keyCode;
+            modifTexte(poeme,press);
 
-                var poeme = $("#animtext").text();
-                var press = touche.which || touche.keyCode;
-                modifTexte(poeme,press);
-
+            // On fait tourner le texte à chaque fois qu'une touche est pressé
+            $('#animtext').animate({  borderSpacing: -360 }, {
+                step: function(now,fx) {
+                    $(this).css('transform','rotate('+now+'deg)');  
+                },
+                duration:'fast'
+            },'linear');
+            
         });
 
     });

@@ -182,20 +182,21 @@
     $(function(){
         
         // Cacher le poeme avec un bloc blanc
-        setInterval(function(){cacher();},500);
+        setInterval(function(){augmenteTaille();},1000);
         
-        function cacher() {
-            var valeur = $("#carreBlanc1").height();
-            valeur = valeur + 1;
-            $("#carreBlanc1").css({
-            height: valeur + "px",
-            background: "#FFFFFF"
+        function augmenteTaille() {
+            
+            $(".carChiffre").css({
+                fontSize: "+=1px"
             });
+            
         }
         
-        // Faire disparaitre le premier sujet en cliquant dessus
-        $("#sujet1").click(function() {
-            $("#sujet1").fadeIn(200);
+        // Apparition du poeme
+        $( "span" ).first().show( "fast", function showNext() {
+            $( this ).next( "span" ).show( "fast", showNext );
         });
+        
             
     });
+

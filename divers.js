@@ -8,16 +8,20 @@
 // AFFICHER CACHER DIV
 
     $(function(){
-
+        
         // Afficher la popup quand je clique sur l'id
-        $("#bulleApropos").click(function() {
-          $("#popupCredit").fadeIn(200);
-        });
+        function afficherCacher() {
+            
+            $("#bulleApropos").click(function() {
+              $("#popupCredit").fadeIn(200);
+            });
 
-        // Cacher la popup quand je clique sur l'id
-        $("#popupCredit").click(function() {
-          $(this).fadeOut(200);
-        });
+            // Cacher la popup quand je clique sur l'id
+            $("#popupCredit").click(function() {
+              $(this).fadeOut(200);
+            });
+
+        }
             
     });
 

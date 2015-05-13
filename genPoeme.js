@@ -7,7 +7,7 @@
 // ************************************************************************************************
 // TABLEAUX DES SUJETS VERBES COMPLEMENTS
     
-    // Tableaux pour twitter
+    // Tableaux pour récupération variables --> twitter
     sujetOriginal = new Array (
     );
     verbeOriginal = new Array (
@@ -166,7 +166,7 @@
     function tweet() {
         
         // Récupérer les infos du compte sauvegardé dans le navigateur 
-        // et ajout des variables de texte inscrits aléatoirement dans le HTML
+        // et ajout des variables de texte inscrits aléatoirement dans le HTML grâce à la sauvergarde dans les Array
         adresse="http://twitter.com/share?related=[your_twitter_account]&via=poesienum&lang=[fr]&text= "+sujetOriginal[0]+" "+verbeOriginal[0]+" "+codOriginal[0]+" "+sujetOriginal[1]+" "+verbeOriginal[1]+" "+codOriginal[1]+" "+sujetOriginal[2]+" "+verbeOriginal[2]+" "+codOriginal[2]+'#generationAutomatique'+"&url=[www.google.com]";
 
         // Ouvre l'adresse dans la fenêtre du navigateur

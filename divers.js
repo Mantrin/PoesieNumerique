@@ -70,9 +70,24 @@
         window.setTimeout("document.form.time.value='3'",38000)
         window.setTimeout("document.form.time.value='2'",39000)
         window.setTimeout("document.form.time.value='1'",40000)
-        window.setTimeout("document.form.time.value='0';location.reload();",41000)
+        window.setTimeout("document.form.time.value='0'; question();",41000)
 
     }
+	
+// ************************************************************************************************
+// QUESTION + INPUT
+	
+	// Déclaration fonction
+	// Quelle que soit la réponse : après appuis sur bouton pour soumission : résultat toujours le même, rechargement de la page.
+	function question()
+		{
+			var demande = prompt("D'après le poème, quel est le sens de votre vie ?", "");
+
+			alert(demande == "" ? demande+" Non, ce n'est pas cela, relisez un poème." 
+							  : demande+" Non, ce n'est pas cela, relisez un poème.");
+							  
+			location.reload();
+		}
 
 // ************************************************************************************************
 // IMPRIMER

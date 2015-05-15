@@ -10,18 +10,9 @@
     $(function(){
         
         // Afficher la popup quand je clique sur l'id
-        function afficherCacher() {
-            
-            $("#bulleApropos").click(function() {
-              $("#popupCredit").fadeIn(200);
-            });
-
-            // Cacher la popup quand je clique sur l'id
-            $("#bulleApropos").click(function() {
-              $("#popupCredit").fadeOut(200);
-            });
-
-        }
+        $("#bulleApropos").click(function() {
+            $("#popupCredit").fadeToggle('200');
+        });
             
     });
 
@@ -79,15 +70,18 @@
 	
 	// Déclaration fonction
 	// Quelle que soit la réponse : après appuis sur bouton pour soumission : résultat toujours le même, rechargement de la page.
-	function question()
-		{
-			var demande = prompt("D'après le poème, quel est le sens de votre vie ?", "");
+    function question() {
+            
+        $("#fondPopup").fadeIn('200');
 
-			alert(demande == "" ? demande+" Non, ce n'est pas cela, relisez un poème." 
-							  : demande+" Non, ce n'est pas cela, relisez un poème.");
-							  
-			location.reload();
-		}
+    }
+
+    // Ajouter un message
+    function message() {
+        var message = document.getElementById("message").value;
+        document.getElementById("tonmessage").innerHTML = message;
+    }
+
 
 // ************************************************************************************************
 // IMPRIMER

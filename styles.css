@@ -4,12 +4,25 @@
 
 */
 
-body { width:  100%; margin: 0; padding: 0; border: 0; background: #353535;}
+body { width:  100%; margin: 0; padding: 0; border: 0; background: #353535; overflow: hidden;}
     
-    #popupFin { display: none; position: absolute; z-index: 40;}
+    /* POPUP DE FIN */
+    #fondPopup { background: rgba(56, 56, 56, 0.9); width: 100%; height: 100%; z-index: 50; position: fixed; top: 0; left: 0; display: none;}
+    #popupQuestion { width: 600px; text-align: center; background: #EEEEEE; padding: 40px 20px 40px 20px; height: 300px; font-family: 'Merriweather', serif; box-shadow: 0px 0px 50px #000000; margin: 20px auto;}
+        
+        #popupQuestion p { color: #FFFFFF; font-size: 20px; margin: 0px 0px 20px 0px;}
+        #popupQuestion input { border: 1px solid #FFFFFF; width: 400px; height: 40px; font-size: 18px; margin: 0px 0px 60px 0px; padding: 10px; font-family: 'Merriweather', serif; color: #FFFFFF; text-align: center; background: none; opacity: 0.5;}
+        #popupQuestion input:hover { border: 1px solid #FFFFFF; opacity: 1; transition-duration: 0.5s;}
+        #popupQuestion input:focus { border: 1px solid #FFFFFF; opacity: 1; transition-duration: 0.5s;}
+
+        #questionBoutons {color: #000000;}
+        #questionBoutons a { padding: 15px 20px; text-decoration: none; font-size: 14px; border-radius: 2px;}
+        a.btnOK:link, a.btnOK:visited { background: #FFFFFF; opacity: 0.5;}
+        a.btnOK:hover { background: #FFFFFF; opacity: 1; transition-duration: 0.5s;}
 
     /* POEME */
-    #contenantPoeme { width: 920px; height: 520px; margin: 20px auto; overflow: hidden; 
+    p.conseil { text-align: center; color: #FFFFFF; border: 0; padding: 10px 0px 0px 0px; margin: 0; width: 100%; font-family: Arial; font-size: 11px; opacity: 0.7;}
+    #contenantPoeme { width: 920px; height: 480px; margin: 10px auto; overflow: hidden; 
         font-family: 'Merriweather', serif; color: #FFFFFF; text-align: center; 
         font-size: 40px; line-height: 60px; border: 1px solid #FFFFFF;}
 
@@ -21,9 +34,6 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #353535;}
     #car { width: 50px; margin: 0 auto; text-align: center;}
         .carChiffre { background: none; border: 0; text-align: center; color: #FFFFFF; font-family: 'Merriweather', serif; 
             font-size: 10px;}
-			
-	/*INSTRUCTION*/
-	#instruction {width:150px; float: left; margin-top:-10px;}
 
     /* BULLE OUTIL */
     .bulleOutil { width: 60px; height: 60px; border: 1px solid #FFFFFF; border-radius: 60px; text-align: center; cursor: pointer; 

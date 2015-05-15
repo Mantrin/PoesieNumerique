@@ -22,8 +22,32 @@
 </head>
 
 <body onLoad="genPoem();rechargement();">
+    
+    <div id="fondPopup">
+        <div id="popupQuestion">
 
+            <p id="tonmessage">
+                D'après le poème,<br/>quel 
+                est le sens de votre vie ?</b>
+            </p>
+
+            <form>
+                <input type="text" name="message" id="message" class="champtexte" onChange="message()";>
+            </form>
+
+            <div id="questionBoutons">
+                <input href="" class="btnOK" type="submit" id="envoyerMessage" value="Soumettre ma réponse" onClick="message();">
+                <a href="generationPoemes.html" class="btnOK">Je ne sais pas</a>
+            </div>
+
+        </div>
+    </div>
+    
     <!-- POEME -->
+    <p class="conseil">
+        Astuce d'utilisation : Appuyez sur 
+        une touche de votre clavier
+    </p>
     <div id="contenantPoeme">
         
         <div id="animtext">
@@ -33,9 +57,6 @@
         </div>
         
     </div>
-	
-	<!-- INSTRUCTION UTILISATION -->
-	<img id="instruction" src="instruction.svg">
 
     <!-- COMPTE A REBOURS -->
     <form method=POST name="form" id="car">

@@ -157,6 +157,11 @@
 
         img = Math.round(Math.random()*bcgimg);
         document.body.style.background = changeCol[img];
+        document.getElementById('popupQuestion').style.background = changeCol[img];
+        document.getElementById('questionBoutons').style.color = changeCol[img];
+        
+        
+        
 
     }
 
@@ -181,13 +186,24 @@
     
     $(function(){
         
-        // Cacher le poeme avec un bloc blanc
+        // Augmenter la taille du CAR chaque seconde
         setInterval(function(){augmenteTaille();},1000);
         
         function augmenteTaille() {
             
             $(".carChiffre").css({
                 fontSize: "+=1px"
+            });
+            
+        }
+        
+        // Augmenter la taille du CAR chaque seconde
+        setInterval(function(){effacerCAR();},41000);
+        
+        function effacerCAR() {
+            
+            $(".carChiffre").css({
+                display: "none"
             });
             
         }

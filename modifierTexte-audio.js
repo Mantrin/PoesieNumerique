@@ -40,8 +40,18 @@
                 duration:'fast'
             },'linear');
             
-            // On active l'audio du piano13.mp3
-            $('#piano').trigger("play");
+            //Place le son piano13 en pause
+            $('#piano').trigger('pause');
+                //On remet le temps à 0
+                $('#piano').prop("currentTime",0);
+
+                // On active l'audio du piano13.mp3
+                $('#piano').trigger("play");
+            
+            // On éclaircie légèrement le background
+            $("body").css({
+                zoom: "50%"
+            });
             
         });
 

@@ -17,8 +17,8 @@
             });
 
             // Cacher la popup quand je clique sur l'id
-            $("#popupCredit").click(function() {
-              $(this).fadeOut(200);
+            $("#bulleApropos").click(function() {
+              $("#popupCredit").fadeOut(200);
             });
 
         }
@@ -94,6 +94,6 @@
 
     function imprimer(){
 
-      window.print();
+        window.print();
 
     }

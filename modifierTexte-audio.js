@@ -40,6 +40,9 @@
                 duration:'fast'
             },'linear');
             
+            // On active l'audio du piano13.mp3
+            $('#piano').trigger("play");
+            
         });
 
     });

@@ -10,15 +10,18 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #353535; over
     #fondPopup { background: rgba(56, 56, 56, 0.9); width: 100%; height: 100%; z-index: 50; position: fixed; top: 0; left: 0; display: none;}
     #popupQuestion { width: 600px; text-align: center; background: #EEEEEE; padding: 40px 20px 40px 20px; height: 300px; font-family: 'Merriweather', serif; box-shadow: 0px 0px 50px #000000; margin: 20px auto;}
         
-        #popupQuestion p { color: #FFFFFF; font-size: 20px; margin: 0px 0px 20px 0px;}
-        #popupQuestion input { border: 1px solid #FFFFFF; width: 400px; height: 40px; font-size: 18px; margin: 0px 0px 60px 0px; padding: 10px; font-family: 'Merriweather', serif; color: #FFFFFF; text-align: center; background: none; opacity: 0.5;}
-        #popupQuestion input:hover { border: 1px solid #FFFFFF; opacity: 1; transition-duration: 0.5s;}
-        #popupQuestion input:focus { border: 1px solid #FFFFFF; opacity: 1; transition-duration: 0.5s;}
+        #popupQuestion p#tonmessage { color: #FFFFFF; font-size: 20px; margin: 0px 0px 20px 0px;}
+        
+        #champ input.champtexte { border: 1px solid #FFFFFF; width: 400px; height: 40px; font-size: 18px; margin: 0px 0px 60px 0px; padding: 10px; font-family: 'Merriweather', serif; color: #FFFFFF; text-align: center; background: none; opacity: 0.5;}
+        #champ input.champtexte:hover { border: 1px solid #FFFFFF; opacity: 1; transition-duration: 0.5s;}
+        #champ input.champtexte:focus { border: 1px solid #FFFFFF; opacity: 1; transition-duration: 0.5s;}
 
-        #questionBoutons {color: #000000;}
-        #questionBoutons a { padding: 15px 20px; text-decoration: none; font-size: 14px; border-radius: 2px;}
-        a.btnOK:link, a.btnOK:visited { background: #FFFFFF; opacity: 0.5;}
-        a.btnOK:hover { background: #FFFFFF; opacity: 1; transition-duration: 0.5s;}
+        input.btnOK { padding: 15px 20px; text-decoration: none; font-size: 14px; border-radius: 2px; cursor: pointer; width: 200px; font-size: 14px; border: 0; background: #FFFFFF; opacity: 0.5; font-family: 'Merriweather', serif;}
+        input.btnOK:link, input.btnOK:visited { }
+        input.btnOK:hover { background: #FFFFFF; opacity: 1; transition-duration: 0.5s;}
+
+        #afficheSiValide { display: none;}
+            p#messageAuteur { color: #FFFFFF; font-size: 20px; margin: 0px 0px 10px 0px;}
 
     /* POEME */
     p.conseil { text-align: center; color: #FFFFFF; border: 0; padding: 10px 0px 0px 0px; margin: 0; width: 100%; font-family: Arial; font-size: 11px; opacity: 0.7;}
@@ -28,7 +31,6 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #353535; over
 
         #animtext { width: 800px; height: 400px; padding: 60px;}
         span {display: none;}
-            .poeme { }
     
     /* COMPTE A REBOURS */
     #car { width: 50px; margin: 0 auto; text-align: center;}
@@ -37,7 +39,7 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #353535; over
 
     /* BULLE OUTIL */
     .bulleOutil { width: 60px; height: 60px; border: 1px solid #FFFFFF; border-radius: 60px; text-align: center; cursor: pointer; 
-        position: absolute; bottom: 20px; opacity: 0.3;}
+        position: absolute; bottom: 20px; opacity: 0.3; z-index: 500;}
     .bulleOutil:hover { opacity: 1;}
 
     /* TWITTER */
@@ -49,8 +51,8 @@ body { width:  100%; margin: 0; padding: 0; border: 0; background: #353535; over
         #logoprint{ width: 20px; padding: 20px 0px 0px 0px;}
 
     /* A PROPOS */
-    #popupCredit { width: 160px; height: 50px; background: #FFFFFF; padding: 10px; position: absolute; bottom: 20px; 
-        right: 260px; display: none;}
+    #popupCredit { width: 160px; background: #FFFFFF; padding: 10px; position: absolute; bottom: 25px; 
+        right: 260px; display: none; z-index: 500;}
     #popupCredit #creditTexte { font-family: Arial; font-size: 12px; line-height: 16px; text-align: center;}
 
     #bulleApropos { float: left; right: 180px;}

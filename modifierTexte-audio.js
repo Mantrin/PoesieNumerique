@@ -33,24 +33,30 @@
             modifTexte(poeme,press);
 
             // On fait tourner le texte à chaque fois qu'une touche est pressé
-            $('#animtext').animate({  borderSpacing: -360 }, {
+            $('#animtext').animate({  
+                borderSpacing: -360 
+            }, {
                 step: function(now,fx) {
                     $(this).css('transform','rotate('+now+'deg)');  
                 },
                 duration:'fast'
-            },'linear');
+            }, "linear");
             
-            //Place le son piano13 en pause
+            // Place piano13.mp3 en pause
             $('#piano').trigger('pause');
-                //On remet le temps à 0
+                // On replace le temps à 0
                 $('#piano').prop("currentTime",0);
 
-                // On active l'audio du piano13.mp3
+                // On active l'audio piano13.mp3
                 $('#piano').trigger("play");
             
-            // On éclaircie légèrement le background
-            $("body").css({
-                zoom: "50%"
+            // On zoom et dézoom à chaque fois qu'une touche est pressé
+            $("#contenantPoeme").animate({
+                zoom: "90%"
+            }, 100, function() {
+                $(this).animate({
+                    zoom: "100%"
+                }, 100);
             });
             
         });

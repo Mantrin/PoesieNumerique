@@ -143,9 +143,9 @@
 // BACKGROUND ALEATOIRE
 
     // Variable "changeCol" abrite un tableau qui liste toutes les couleurs possibles
-    var changeCol = new Array("#36341b","#323f38","#7c8f7c","#92996f","#ba944d","#b35a48",
-                              "#42271c","#08589e","#4eb3d3","#d2d904","#f23d30","#572436","#4a3970",
-                              "#7f6aa0","#b4ace2","#49006a","#ae017e","#776677","#665555","#554455","#fe9711","#ee6644",
+    var changeCol = new Array("#1A2530","#2C3E50","#34495E","#E74C3C","#DF5A49","#E27A3F",
+                              "#45B29D","#334D5C","#459436","#BDCF2D","#8EC547","#010626","#026773",
+                              "#571428","#761838","#6B6860","#01393F","#8C2702","#58372E","#8B4D34","#066E2B","#ee6644",
                               "#fb0b81","#5b0796","#7c1c32","#4e1833","#8b5974","#6e4373","#454b81","#445511",
                               "#806315","#553E00","#354F00","#226666");
 
@@ -156,13 +156,11 @@
         var img; 
 
         img = Math.round(Math.random()*bcgimg);
+        // On place la couleur sur le background de la page
         document.body.style.background = changeCol[img];
+        // Dans la popup qui s'affiche à la fin du CAR
         document.getElementById('popupQuestion').style.background = changeCol[img];
-        document.getElementById('questionBoutons').style.color = changeCol[img];
         
-        
-        
-
     }
 
 // ************************************************************************************************
@@ -197,13 +195,14 @@
             
         }
         
-        // Augmenter la taille du CAR chaque seconde
+        // Efface le CAR au bout de 41 secondes
         setInterval(function(){effacerCAR();},41000);
         
         function effacerCAR() {
             
             $(".carChiffre").css({
-                display: "none"
+                display: "none",
+                fontSize: "1px"
             });
             
         }

@@ -9,7 +9,8 @@
     
     <title>PAM : Poésie Automatique et Métaphysique</title>
     
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <link rel="stylesheet" type="text/css" media="print" href="styles_print.css">
     <link href='http://fonts.googleapis.com/css?family=Merriweather:700,400,300' rel='stylesheet' type='text/css'>
     
     <script type="application/javascript" src="jquery.js"></script>
@@ -30,14 +31,28 @@
                 D'après le poème,<br/>quel 
                 est le sens de votre vie ?</b>
             </p>
+            
+            <div id="cacheSiValide">
+                <form id="champ">
+                    <input type="text" name="message" id="message" class="champtexte" onChange="message()";>
+                </form>
 
-            <form>
-                <input type="text" name="message" id="message" class="champtexte" onChange="message()";>
-            </form>
+                <div>
+                    <input href="" class="btnOK" type="submit" id="envoyerMessage" value="Soumettre ma réponse" onClick="message();">
+                    <input href="" class="btnOK" type="submit" value="Je ne sais pas" onClick="window.location.reload();">
+                </div>
+            </div>
+    
+            <div id="afficheSiValide">
+                
+                <p id="messageAuteur">
+                <p style=" font-size: 11px; color: #FFFFFF;">******</p><br/>
+                <p style=" color: #FFFFFF;" id="reponseAuteur"></p>
+                </p>
 
-            <div id="questionBoutons">
-                <input href="" class="btnOK" type="submit" id="envoyerMessage" value="Soumettre ma réponse" onClick="message();">
-                <a href="generationPoemes.html" class="btnOK">Je ne sais pas</a>
+                <div>
+                    <input href="" class="btnOK" type="submit" value="Recommencer" onClick="window.location.reload();">
+                </div>
             </div>
 
         </div>
@@ -64,7 +79,7 @@
     </form>
     
     <!-- PARTAGE SUR TWITTER -->
-    <div class="bulleOutil" id="bulleTwitter" onClick="tweet();">
+    <div class="bulleOutil" id="bulleTwitter" onClick="tweet();" target="_blank">
         <img id="logotwitter" onClick="tweet();" src="twitter13.svg">
     </div>
     

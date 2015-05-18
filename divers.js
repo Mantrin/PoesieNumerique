@@ -67,19 +67,41 @@
 	
 // ************************************************************************************************
 // QUESTION + INPUT
-	
-	// Déclaration fonction
-	// Quelle que soit la réponse : après appuis sur bouton pour soumission : résultat toujours le même, rechargement de la page.
+
+    // Dès que le CAR arrive à 0, on l'enlève, on arrète la musique et piano13.mp3
     function question() {
             
         $("#fondPopup").fadeIn('200');
+        $("#musique").trigger("pause");
+        $("#piano").trigger("pause");
 
     }
 
-    // Ajouter un message
+	// Lorsque l'internaute appuie sur "Soumettre ma réponse"
     function message() {
+        // On affiche le message qu'il a écrit dans l'id #tonmessage
         var message = document.getElementById("message").value;
         document.getElementById("tonmessage").innerHTML = message;
+        
+        // On cache le champs et les deux boutons
+        document.getElementById("cacheSiValide").style.display = "none";
+        // On affiche un message et un bouton
+        document.getElementById("afficheSiValide").style.display = "block";
+        
+        // On applique des conditions de réponses de l'auteur en fonction de la réponse
+        if ((message == "42") || (message == "Quarante-deux") || (message == "Quarante-Deux") || (message == "quarante-deux") || (message == "quarante deux")  || (message == "Quarante Deux")) {
+            document.getElementById("reponseAuteur").innerHTML = "Il faut d'abord trouver la grande question sur la vie, l'univers et le reste ...";
+        }
+        else if ((message == "Le néant") || (message == "Néant") || (message == "le néant") || (message == "néant") || (message == "Rien") || (message == "rien") || (message == "") || (message == " ") || (message == "Nada")) {
+            document.getElementById("reponseAuteur").innerHTML = "On se rapproche ...";
+        }
+        else if ((message == "Amour") || (message == "L'amour") || (message == "Aimer") || (message == "Donner de l'amour") || (message == "Donner")) {
+            document.getElementById("reponseAuteur").innerHTML = "C'est quand même un peu nian nian ça ...";
+        }
+        else {
+            document.getElementById("reponseAuteur").innerHTML = "Malheureusement ce n'est pas la bonne réponse...";
+        }
+        
     }
 
 

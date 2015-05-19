@@ -68,12 +68,15 @@
 // ************************************************************************************************
 // QUESTION + INPUT
 
-    // Dès que le CAR arrive à 0, on l'enlève, on arrète la musique et piano13.mp3
+    // Dès que le CAR arrive à 0, on appelle cette fonction
     function question() {
             
+        // On affiche la popup
         $("#fondPopup").fadeIn('200');
-        $("#musique").trigger("pause");
-        $("#piano").trigger("pause");
+        
+        // On met le volume de piano13.mp3 à 0
+        var vid = document.getElementById("piano");
+        vid.volume = 0;
 
     }
 

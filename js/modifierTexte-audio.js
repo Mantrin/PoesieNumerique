@@ -12,7 +12,7 @@
     mem[65]="a"; mem[66]="b"; mem[67]="c"; mem[68]="d"; mem[69]="e"; mem[70]="f"; mem[71]="g"; mem[72]="h"; 
     mem[73]="i"; mem[74]="j"; mem[75]="k"; mem[76]="l"; mem[77]="m"; mem[78]="n"; mem[79]="o"; mem[80]="p"; 
     mem[81]="q"; mem[82]="r"; mem[83]="s"; mem[84]="t"; mem[85]="u"; mem[86]="v"; mem[87]="w"; mem[88]="x"; 
-    mem[89]="y"; mem[90]="z";
+    mem[89]="y"; mem[90]="z"; mem[190]=".";
 
     lettre = new Array()
     

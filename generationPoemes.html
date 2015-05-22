@@ -9,15 +9,15 @@
     
     <title>PAM : Poésie Automatique et Métaphysique</title>
     
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
-    <link rel="stylesheet" type="text/css" media="print" href="styles_print.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" media="print" href="css/styles_print.css">
     <link href='http://fonts.googleapis.com/css?family=Merriweather:700,400,300' rel='stylesheet' type='text/css'>
     
-    <script type="application/javascript" src="jquery.js"></script>
+    <script type="application/javascript" src="js/jquery.js"></script>
     
-    <script language="javascript" type="text/javascript" src="genPoeme.js"></script>
-    <script language="javascript" type="text/javascript" src="modifierTexte-audio.js"></script>
-    <script language="javascript" type="text/javascript" src="divers.js"></script>
+    <script language="javascript" type="text/javascript" src="js/genPoeme.js"></script>
+    <script language="javascript" type="text/javascript" src="js/modifierTexte-audio.js"></script>
+    <script language="javascript" type="text/javascript" src="js/divers.js"></script>
     
 
 </head>
@@ -80,12 +80,12 @@
     
     <!-- PARTAGE SUR TWITTER -->
     <div class="bulleOutil" id="bulleTwitter" onClick="tweet();" target="_blank">
-        <img id="logotwitter" onClick="tweet();" src="twitter13.svg">
+        <img id="logotwitter" onClick="tweet();" src="img/twitter13.svg">
     </div>
     
     <!-- IMPRIMER -->
     <div class="bulleOutil" id="bulleImprimer" onClick="imprimer();">
-        <img id="logoprint" onClick="imprimer();" src="print.svg">
+        <img id="logoprint" onClick="imprimer();" src="img/print.svg">
     </div>
     
     <!-- CREDITS -->
@@ -98,12 +98,12 @@
     </div>
 	
 	<!-- MUSIQUE : automatiquement lancée + player caché -->
-	<audio controls autoplay id="musique" src="Chopin - Notturno op. 9 n. 1 - Pollini.mp3">
+	<audio controls autoplay id="musique" src="sons/Chopin - Notturno op. 9 n. 1 - Pollini.mp3">
 	Votre navigateur ne supporte pas la balise audio.
 	</audio> 
 	
 	<!-- NOTE PIANO : si touche enfoncée. Voir fonction piano dans js "modifierTexte-audio" -->
-	<audio controls play="false" id="piano" src="piano13.mp3">
+	<audio controls play="false" id="piano" src="sons/piano13.mp3">
 	</audio>
 
 </body>
